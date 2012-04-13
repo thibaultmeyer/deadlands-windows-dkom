@@ -1,0 +1,16 @@
+1. Let's say you want to install the PSPLinkusb driver. First you want to generate your own root certificate for that driver with:
+
+makecert -$ individual -r -pe -ss "Deadlands Drivers" -n CN="Deadlands Drivers" deadlands_signed.cer
+
+
+
+2. Then you install the certificate you just created to the trusted root directory:
+
+certmgr /add deadlands_signed.cer /s /r localMachine root
+
+
+
+
+3. Finally, you sign EACH .sys file using the certificate:
+
+signtool sign /v /s "Deadlands Drivers" /n "Deadlands Drivers" DEADLANDS.sys

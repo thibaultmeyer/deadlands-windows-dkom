@@ -1,0 +1,17 @@
+================ WINDOWS XP =========================
+/DEBUG
+
+
+
+=========== WINDOWS VISTA/SEVEN =====================
+
+bcdedit /DEBUG ON
+bcdedit /set nointegritychecks on
+
+
+
+==================   WIN DBG  =======================
+
+.sympath srv*c:\symbols*http://msdl.microsoft.com/download/symbols
+.sympath
+.reload /f

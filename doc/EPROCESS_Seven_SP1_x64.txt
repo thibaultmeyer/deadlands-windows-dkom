@@ -1,0 +1,139 @@
+Windows Seven SP1 x64
+======================
+
+lkd> dt nt!_EPROCESS
+   +0x000 Pcb              : _KPROCESS
+   +0x160 ProcessLock      : _EX_PUSH_LOCK
+   +0x168 CreateTime       : _LARGE_INTEGER
+   +0x170 ExitTime         : _LARGE_INTEGER
+   +0x178 RundownProtect   : _EX_RUNDOWN_REF
+   +0x180 UniqueProcessId  : Ptr64 Void
+   +0x188 ActiveProcessLinks : _LIST_ENTRY
+   +0x198 ProcessQuotaUsage : [2] Uint8B
+   +0x1a8 ProcessQuotaPeak : [2] Uint8B
+   +0x1b8 CommitCharge     : Uint8B
+   +0x1c0 QuotaBlock       : Ptr64 _EPROCESS_QUOTA_BLOCK
+   +0x1c8 CpuQuotaBlock    : Ptr64 _PS_CPU_QUOTA_BLOCK
+   +0x1d0 PeakVirtualSize  : Uint8B
+   +0x1d8 VirtualSize      : Uint8B
+   +0x1e0 SessionProcessLinks : _LIST_ENTRY
+   +0x1f0 DebugPort        : Ptr64 Void
+   +0x1f8 ExceptionPortData : Ptr64 Void
+   +0x1f8 ExceptionPortValue : Uint8B
+   +0x1f8 ExceptionPortState : Pos 0, 3 Bits
+   +0x200 ObjectTable      : Ptr64 _HANDLE_TABLE
+   +0x208 Token            : _EX_FAST_REF
+   +0x210 WorkingSetPage   : Uint8B
+   +0x218 AddressCreationLock : _EX_PUSH_LOCK
+   +0x220 RotateInProgress : Ptr64 _ETHREAD
+   +0x228 ForkInProgress   : Ptr64 _ETHREAD
+   +0x230 HardwareTrigger  : Uint8B
+   +0x238 PhysicalVadRoot  : Ptr64 _MM_AVL_TABLE
+   +0x240 CloneRoot        : Ptr64 Void
+   +0x248 NumberOfPrivatePages : Uint8B
+   +0x250 NumberOfLockedPages : Uint8B
+   +0x258 Win32Process     : Ptr64 Void
+   +0x260 Job              : Ptr64 _EJOB
+   +0x268 SectionObject    : Ptr64 Void
+   +0x270 SectionBaseAddress : Ptr64 Void
+   +0x278 Cookie           : Uint4B
+   +0x27c UmsScheduledThreads : Uint4B
+   +0x280 WorkingSetWatch  : Ptr64 _PAGEFAULT_HISTORY
+   +0x288 Win32WindowStation : Ptr64 Void
+   +0x290 InheritedFromUniqueProcessId : Ptr64 Void
+   +0x298 LdtInformation   : Ptr64 Void
+   +0x2a0 Spare            : Ptr64 Void
+   +0x2a8 ConsoleHostProcess : Uint8B
+   +0x2b0 DeviceMap        : Ptr64 Void
+   +0x2b8 EtwDataSource    : Ptr64 Void
+   +0x2c0 FreeTebHint      : Ptr64 Void
+   +0x2c8 FreeUmsTebHint   : Ptr64 Void
+   +0x2d0 PageDirectoryPte : _HARDWARE_PTE
+   +0x2d0 Filler           : Uint8B
+   +0x2d8 Session          : Ptr64 Void
+   +0x2e0 ImageFileName    : [15] UChar
+   +0x2ef PriorityClass    : UChar
+   +0x2f0 JobLinks         : _LIST_ENTRY
+   +0x300 LockedPagesList  : Ptr64 Void
+   +0x308 ThreadListHead   : _LIST_ENTRY
+   +0x318 SecurityPort     : Ptr64 Void
+   +0x320 Wow64Process     : Ptr64 Void
+   +0x328 ActiveThreads    : Uint4B
+   +0x32c ImagePathHash    : Uint4B
+   +0x330 DefaultHardErrorProcessing : Uint4B
+   +0x334 LastThreadExitStatus : Int4B
+   +0x338 Peb              : Ptr64 _PEB
+   +0x340 PrefetchTrace    : _EX_FAST_REF
+   +0x348 ReadOperationCount : _LARGE_INTEGER
+   +0x350 WriteOperationCount : _LARGE_INTEGER
+   +0x358 OtherOperationCount : _LARGE_INTEGER
+   +0x360 ReadTransferCount : _LARGE_INTEGER
+   +0x368 WriteTransferCount : _LARGE_INTEGER
+   +0x370 OtherTransferCount : _LARGE_INTEGER
+   +0x378 CommitChargeLimit : Uint8B
+   +0x380 CommitChargePeak : Uint8B
+   +0x388 AweInfo          : Ptr64 Void
+   +0x390 SeAuditProcessCreationInfo : _SE_AUDIT_PROCESS_CREATION_INFO
+   +0x398 Vm               : _MMSUPPORT
+   +0x420 MmProcessLinks   : _LIST_ENTRY
+   +0x430 HighestUserAddress : Ptr64 Void
+   +0x438 ModifiedPageCount : Uint4B
+   +0x43c Flags2           : Uint4B
+   +0x43c JobNotReallyActive : Pos 0, 1 Bit
+   +0x43c AccountingFolded : Pos 1, 1 Bit
+   +0x43c NewProcessReported : Pos 2, 1 Bit
+   +0x43c ExitProcessReported : Pos 3, 1 Bit
+   +0x43c ReportCommitChanges : Pos 4, 1 Bit
+   +0x43c LastReportMemory : Pos 5, 1 Bit
+   +0x43c ReportPhysicalPageChanges : Pos 6, 1 Bit
+   +0x43c HandleTableRundown : Pos 7, 1 Bit
+   +0x43c NeedsHandleRundown : Pos 8, 1 Bit
+   +0x43c RefTraceEnabled  : Pos 9, 1 Bit
+   +0x43c NumaAware        : Pos 10, 1 Bit
+   +0x43c ProtectedProcess : Pos 11, 1 Bit
+   +0x43c DefaultPagePriority : Pos 12, 3 Bits
+   +0x43c PrimaryTokenFrozen : Pos 15, 1 Bit
+   +0x43c ProcessVerifierTarget : Pos 16, 1 Bit
+   +0x43c StackRandomizationDisabled : Pos 17, 1 Bit
+   +0x43c AffinityPermanent : Pos 18, 1 Bit
+   +0x43c AffinityUpdateEnable : Pos 19, 1 Bit
+   +0x43c PropagateNode    : Pos 20, 1 Bit
+   +0x43c ExplicitAffinity : Pos 21, 1 Bit
+   +0x440 Flags            : Uint4B
+   +0x440 CreateReported   : Pos 0, 1 Bit
+   +0x440 NoDebugInherit   : Pos 1, 1 Bit
+   +0x440 ProcessExiting   : Pos 2, 1 Bit
+   +0x440 ProcessDelete    : Pos 3, 1 Bit
+   +0x440 Wow64SplitPages  : Pos 4, 1 Bit
+   +0x440 VmDeleted        : Pos 5, 1 Bit
+   +0x440 OutswapEnabled   : Pos 6, 1 Bit
+   +0x440 Outswapped       : Pos 7, 1 Bit
+   +0x440 ForkFailed       : Pos 8, 1 Bit
+   +0x440 Wow64VaSpace4Gb  : Pos 9, 1 Bit
+   +0x440 AddressSpaceInitialized : Pos 10, 2 Bits
+   +0x440 SetTimerResolution : Pos 12, 1 Bit
+   +0x440 BreakOnTermination : Pos 13, 1 Bit
+   +0x440 DeprioritizeViews : Pos 14, 1 Bit
+   +0x440 WriteWatch       : Pos 15, 1 Bit
+   +0x440 ProcessInSession : Pos 16, 1 Bit
+   +0x440 OverrideAddressSpace : Pos 17, 1 Bit
+   +0x440 HasAddressSpace  : Pos 18, 1 Bit
+   +0x440 LaunchPrefetched : Pos 19, 1 Bit
+   +0x440 InjectInpageErrors : Pos 20, 1 Bit
+   +0x440 VmTopDown        : Pos 21, 1 Bit
+   +0x440 ImageNotifyDone  : Pos 22, 1 Bit
+   +0x440 PdeUpdateNeeded  : Pos 23, 1 Bit
+   +0x440 VdmAllowed       : Pos 24, 1 Bit
+   +0x440 CrossSessionCreate : Pos 25, 1 Bit
+   +0x440 ProcessInserted  : Pos 26, 1 Bit
+   +0x440 DefaultIoPriority : Pos 27, 3 Bits
+   +0x440 ProcessSelfDelete : Pos 30, 1 Bit
+   +0x440 SetTimerResolutionLink : Pos 31, 1 Bit
+   +0x444 ExitStatus       : Int4B
+   +0x448 VadRoot          : _MM_AVL_TABLE
+   +0x488 AlpcContext      : _ALPC_PROCESS_CONTEXT
+   +0x4a8 TimerResolutionLink : _LIST_ENTRY
+   +0x4b8 RequestedTimerResolution : Uint4B
+   +0x4bc ActiveThreadsHighWatermark : Uint4B
+   +0x4c0 SmallestTimerResolution : Uint4B
+   +0x4c8 TimerResolutionStackRecord : Ptr64 _PO_DIAG_STACK_RECORD
