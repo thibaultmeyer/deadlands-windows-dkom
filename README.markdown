@@ -13,6 +13,5 @@ In order to compile this project, WDK (Windows Driver Kit) must be installed on 
 
 
 ## How to use?
-Use DeadlandsIOCTL.exe to indicate witch PID/ProcessName you want to set hidden.
->DeadlandsIOCTL.exe name Explorer.exe
->DeadlandsIOCTL.exe pid 2344
++ Load the driver with loader.exe
++ Use DeadlandsIOCTL.exe to indicate which PID/ProcessName you want to set hidden.
